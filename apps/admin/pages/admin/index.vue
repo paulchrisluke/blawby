@@ -9,7 +9,7 @@ const stats = ref([
     text: 'Users',
     count: '100',
     icon: 'ri:user-line',
-    color: 'bg-amber-500',
+    color: 'bg-indigo-500',
   },
   {
     text: 'Posts',

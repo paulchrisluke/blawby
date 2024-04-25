@@ -167,7 +167,7 @@ const open = ref(false)
                 <div class="border-b border-gray-200">
                   <TabList class="-mb-px flex space-x-8 px-4">
                     <Tab v-for="category in navigation.categories" :key="category.name" v-slot="{ selected }" as="template">
-                      <button class="flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium" :class="[selected ? 'text-amber-600 border-amber-600' : 'text-gray-900 border-transparent']">
+                      <button class="flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium" :class="[selected ? 'text-indigo-600 border-indigo-600' : 'text-gray-900 border-transparent']">
                         {{ category.name }}
                       </button>
                     </Tab>
@@ -232,7 +232,7 @@ const open = ref(false)
     </TransitionRoot>
 
     <header class="relative bg-white">
-      <p class="flex h-10 items-center justify-center bg-amber-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+      <p class="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
         Get free delivery on orders over $100
       </p>
 
@@ -257,7 +257,7 @@ const open = ref(false)
               <div class="flex h-full space-x-8">
                 <Popover v-for="category in navigation.categories" :key="category.name" v-slot="{ open }" class="flex">
                   <div class="relative flex">
-                    <PopoverButton class="relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out" :class="[open ? 'border-amber-600 text-amber-600' : 'border-transparent text-gray-700 hover:text-gray-800']">
+                    <PopoverButton class="relative z-10 -mb-px flex items-center border-b-2 pt-px text-sm font-medium transition-colors duration-200 ease-out" :class="[open ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-gray-700 hover:text-gray-800']">
                       {{ category.name }}
                     </PopoverButton>
                   </div>

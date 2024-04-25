@@ -16,7 +16,7 @@ const props
       py-2
       transition
       duration-300
-      hover:bg-amber-500
+      hover:bg-indigo-500
       hover:text-white
       rounded
       flex

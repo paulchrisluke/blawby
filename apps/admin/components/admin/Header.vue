@@ -53,14 +53,14 @@ const logout = () => {
             class="
               text-gray-600
               hover:bg-gray-200
-              hover:text-amber-500
+              hover:text-indigo-500
               px-2
               py-2
               rounded
             "
           >
             <span
-              :class="[open ? 'text-amber-500' : '']"
+              :class="[open ? 'text-indigo-500' : '']"
               class="flex items-center gap-2"
             >
               <Icon name="ri:user-line" class="w-5 h-5" />
