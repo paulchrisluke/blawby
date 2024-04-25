@@ -47,7 +47,7 @@
               </div>
             </div>
 
-            <NuxtLink to="/store/products" class="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700">
+            <NuxtLink to="/store/products" class="inline-block rounded-md border border-transparent bg-amber-600 py-3 px-8 text-center font-medium text-white hover:bg-amber-700">
               Shop Collection
             </NuxtLink>
           </div>

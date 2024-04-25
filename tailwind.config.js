@@ -1,7 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
-const primary = colors.indigo
+const primary = colors.amber
 const secondary = colors.pink
 const info = colors.sky
 const warning = colors.amber

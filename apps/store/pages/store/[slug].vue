@@ -262,8 +262,8 @@ const selectedSize = ref(product.sizes[2])
                   ml-3
                   text-sm
                   font-medium
-                  text-indigo-600
-                  hover:text-indigo-500
+                  text-amber-600
+                  hover:text-amber-500
                 "
               >{{ reviews.totalCount }} reviews</a>
             </div>
@@ -321,8 +321,8 @@ const selectedSize = ref(product.sizes[2])
                   class="
                     text-sm
                     font-medium
-                    text-indigo-600
-                    hover:text-indigo-500
+                    text-amber-600
+                    hover:text-amber-500
                   "
                 >Size guide</a>
               </div>
@@ -347,7 +347,7 @@ const selectedSize = ref(product.sizes[2])
                         size.inStock
                           ? 'bg-white shadow-sm text-gray-900 cursor-pointer'
                           : 'bg-gray-50 text-gray-200 cursor-not-allowed',
-                        active ? 'ring-2 ring-indigo-500' : '',
+                        active ? 'ring-2 ring-amber-500' : '',
                       ]"
                     >
                       <RadioGroupLabel as="span">
@@ -357,7 +357,7 @@ const selectedSize = ref(product.sizes[2])
                         v-if="size.inStock"
                         class="absolute -inset-px rounded-md pointer-events-none" :class="[
                           active ? 'border' : 'border-2',
-                          checked ? 'border-indigo-500' : 'border-transparent',
+                          checked ? 'border-amber-500' : 'border-transparent',
                         ]"
                         aria-hidden="true"
                       />
@@ -405,7 +405,7 @@ const selectedSize = ref(product.sizes[2])
               class="
                 mt-10
                 w-full
-                bg-indigo-600
+                bg-amber-600
                 border border-transparent
                 rounded-md
                 py-3
@@ -416,9 +416,9 @@ const selectedSize = ref(product.sizes[2])
                 text-base
                 font-medium
                 text-white
-                hover:bg-indigo-700
+                hover:bg-amber-700
                 focus:outline-none
-                focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+                focus:ring-2 focus:ring-offset-2 focus:ring-amber-500
               "
             >
               Add to bag

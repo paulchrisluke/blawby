@@ -16,10 +16,10 @@
         <span class="font-medium text-gray-800">{{ $t("app_name") }}</span>
         by
         <a
-          href="https://github.com/gravitano"
+          href="https://www.upwork.com/freelancers/paulchrisluke"
           class="font-medium hover:underline text-gray-800"
         >
-          Warsono
+          PCL-Labs
         </a>. All rights reserved.
       </div>
     </div>

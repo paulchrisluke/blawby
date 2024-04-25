@@ -1,48 +1,48 @@
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/vue/24/outline'
+import { ArrowTrendingUpIcon, CalendarIcon, PhoneIcon, BriefcaseIcon } from '@heroicons/vue/24/outline'
 
 export default defineAppConfig({
   title: 'Blawby',
   description: 'Beautifully designed, fully featured, and ready to go lead generation for legal websites.',
   features: [
     {
-      name: 'Blawby',
+      name: 'Scheduling',
       description:
-        'The latest and greatest version of Nuxt.js, with a new file system based routing system and a new way to write your components.',
-      icon: CloudArrowUpIcon,
+        'Fully integrated with Calendly. Schedule consultations, automatically handle rescheduling, integrate with Google calendar.',
+      icon: CalendarIcon,
     },
     {
-      name: 'Tailwind CSS',
+      name: 'Media Kits',
       description:
-        'A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.',
-      icon: LockClosedIcon,
+        'Beautifully designed brand support. Logo, business cards, letterhead, and social media assets designed for you in editable Google docs/drive.',
+      icon: BriefcaseIcon,
     },
     {
-      name: 'Headless UI',
+      name: 'Ad Management',
       description:
-        'Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.',
-      icon: ArrowPathIcon,
+        'Google & Meta ad management. Get brand exposure across media channels in your state. Special $10,000/mo FREE Google Search ad credit available for nonprofits.',
+      icon: ArrowTrendingUpIcon,
     },
     {
-      name: 'Built-in Components',
+      name: '24/7 Support',
       description:
-        'A collection of UI components built with Tailwind CSS and Headless UI, ready to be used in your projects.',
-      icon: FingerPrintIcon,
+        'Always maintained, always best-in-class. No need to worry about domain, hosting, or platform management.',
+      icon: PhoneIcon,
     },
   ],
   feature: {
-    title: 'Develop Faster',
-    subtitle: 'Everything you need to create your app',
-    description: 'Includes everything you need to build your app, including a customizable UI kit, authentication, and more.',
-    image: 'https://tailwindui.com/img/component-images/dark-project-app-screenshot.png',
+    title: 'Get More Leads',
+    subtitle: 'Everything you need to get more scheduled consultations',
+    description: 'Includes everything you need to build your legal practice online, including scheduling, media kits, ad support and more.',
+    image: 'https://res.cloudinary.com/image-gallery-pcl/image/upload/v1714012904/Blawby/dark-project-app-screenshot.webp',
   },
   announcement: {
     enabled: true,
-    message: 'Nuxt Tailwind Kit is now available for Nuxt 3!',
+    message: 'SEO ready video & blogs have been released!',
     url: '/docs/getting-started/installation',
   },
   cta: {
-    title: 'Boost your productivity',
-    description: 'Start building your next app with Nuxt Tailwind Kit today.',
+    title: 'Boost your legal practice',
+    description: 'Start building your online pressence with Blawby today.',
     links: [
       {
         title: 'Get Started',
@@ -56,6 +56,6 @@ export default defineAppConfig({
         arrow: true,
       },
     ],
-    image: 'https://tailwindui.com/img/component-images/dark-project-app-screenshot.png',
+    image: 'https://res.cloudinary.com/image-gallery-pcl/image/upload/v1714013454/Blawby/dark-project-analytics-screenshot.webp',
   },
 })

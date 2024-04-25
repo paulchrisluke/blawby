@@ -26,18 +26,18 @@ export default defineNuxtConfig({
       locale: 'en',
       messages: {
         en: {
-          app_name: 'Nuxt Tailwind Kit',
+          app_name: 'Blawby',
           app_description:
-        'Quick Boilerplate built on top of Nuxt 3 and Tailwind CSS',
+        'Beautifully designed, fully featured, and ready to go lead generation for legal websites',
           menu_home: 'Home',
           menu_store: 'Store',
           menu_blog: 'Blog',
           menu_dashboard: 'Dashboard',
         },
         id: {
-          app_name: 'Nuxt Tailwind Kit',
+          app_name: 'Blawby',
           app_description:
-        'Boilerplate cepat yang dibangun dari Nuxt 3 and Tailwind CSS',
+        'Beautifully designed, fully featured, and ready to go lead generation for legal websites',
           menu_home: 'Beranda',
           menu_store: 'Toko',
           menu_blog: 'Blog',

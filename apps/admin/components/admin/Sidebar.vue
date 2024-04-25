@@ -123,7 +123,7 @@ const menus = ref([
           py-5
           w-full
           font-bold
-          text-lg text-indigo-500
+          text-lg text-amber-500
           flex
           gap-2
           items-center

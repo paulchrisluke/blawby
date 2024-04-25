@@ -12,7 +12,7 @@ useHead({
   <div>
     <LandingFeatureTwoColumn />
 
-    <LandingFeatureGrid />
+    <!-- <LandingFeatureGrid /> -->
 
     <LandingCta />
   </div>

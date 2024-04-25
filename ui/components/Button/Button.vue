@@ -55,9 +55,9 @@ const btn = tv({
     `,
   variants: {
     color: {
-      light: 'bg-white text-gray-800 border-gray-400 hover:bg-gray-100 focus:ring-indigo-600 disabled:bg-gray-100 disabled:text-gray-400 disabled:border-gray-200 disabled:bg-gray-200',
+      light: 'bg-white text-gray-800 border-gray-400 hover:bg-gray-100 focus:ring-amber-600 disabled:bg-gray-100 disabled:text-gray-400 disabled:border-gray-200 disabled:bg-gray-200',
       dark: 'text-white bg-neutral-800 border-neutral-800 focus:ring-neutral-800 disabled:bg-neutral-500 disabled:text-neutral-300 disabled:border-neutral-500',
-      primary: 'bg-indigo-600 border-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-600 disabled:bg-indigo-400 disabled:text-indigo-200 disabled:border-indigo-400',
+      primary: 'bg-amber-600 border-amber-600 text-white hover:bg-amber-700 focus:ring-amber-600 disabled:bg-amber-400 disabled:text-amber-200 disabled:border-amber-400',
       secondary: 'bg-gray-600 border-gray-600 text-white hover:bg-gray-700 focus:ring-gray-600 disabled:bg-gray-400 disabled:text-gray-200 disabled:border-gray-400',
       warning: 'bg-amber-500 border-amber-500 text-white hover:bg-amber-600 focus:ring-amber-500 disabled:bg-amber-300 disabled:text-amber-100 disabled:border-amber-300',
       error: 'bg-rose-600 border-rose-600 text-white hover:bg-rose-700 focus:ring-rose-600 disabled:bg-rose-400 disabled:text-rose-200 disabled:border-rose-400',
@@ -100,12 +100,12 @@ const btn = tv({
     {
       variant: 'tertiary',
       color: 'primary',
-      class: 'text-indigo-600 hover:text-white',
+      class: 'text-amber-600 hover:text-white',
     },
     {
       variant: 'ghost',
       color: 'primary',
-      class: 'text-indigo-600 hover:bg-indigo-100',
+      class: 'text-amber-600 hover:bg-amber-100',
     },
     // secondary
     {
