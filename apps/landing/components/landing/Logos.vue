@@ -10,8 +10,8 @@
         </div>
         <div class="mt-16 flex justify-center">
           <p class="relative rounded-full bg-gray-50 px-4 py-1.5 text-sm leading-6 text-gray-600 ring-1 ring-inset ring-gray-900/5">
-            <span class="hidden md:inline">Over 2500 companies use our tools to better their business.</span>
-            <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true" /> Read our customer stories <span aria-hidden="true">&rarr;</span></a>
+            <span class="hidden md:inline">Run a <strong>nonprofit</strong> legal firm? Get $10,000/mo in FREE Google Search ad credits</span>
+            <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true" /> Learn how <span aria-hidden="true">&rarr;</span></a>
           </p>
         </div>
       </div>

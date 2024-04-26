@@ -19,6 +19,7 @@
               </dl>
             </div>
           </div>
+          <!-- stacked cards -->
           <div class="relative sm:px-6 lg:px-0">
             <!-- last card -->
             <div class="transition ease-in-out delay-150 hover:-translate-y-12 duration-300 -top-4 -left-4 -skew-y-2 drop-shadow-xl absolute isolate overflow-hidden bg-indigo-500 px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pl-16 sm:pr-0 sm:pt-16 lg:mx-0 lg:max-w-none">
