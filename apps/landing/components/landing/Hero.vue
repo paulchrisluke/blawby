@@ -16,7 +16,7 @@
     </div>
     <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
       <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-        <img class="h-11" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500" alt="Your Company" />
+        <!-- <img class="h-11" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500" alt="Your Company" /> -->
         <div class="mt-24 sm:mt-32 lg:mt-16">
           <a href="#" class="inline-flex space-x-6">
             <span class="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">What's new</span>
@@ -33,15 +33,66 @@
           <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-        <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-          <img src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="App screenshot" width="2432" height="1442" class="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10" />
+      <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-auto lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
+  <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none relative">
+    <div class="w-full lg:w-auto mx-auto lg:mx-0">
+      <!-- Stacked cards -->
+      <div class="relative sm:px-6 lg:px-0">
+        <div
+          v-for="(feature, index) in features"
+          :key="index"
+          :class="getIndexClass(index)"
+          @click="activeCardIndex = index"
+          class="cursor-pointer transition ease-in-out delay-150 hover:-translate-y-6 duration-300 drop-shadow-xl absolute isolate overflow-hidden rounded-lg"
+          style="width: 500px; height: 500px"
+        >
+          <img
+            :src="feature.img"
+            alt="Product screenshot"
+            class="w-full h-full object-cover rounded-lg"
+          />
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
     </div>
   </div>
 </template>
 
 <script setup>
 import { ChevronRightIcon } from '@heroicons/vue/20/solid'
+// import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/vue/20/solid';
+  
+  const features = [
+    {
+      name: 'Push to deploy.',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      // icon: CloudArrowUpIcon,
+      img: 'https://tailwindui.com/img/component-images/project-app-screenshot.png'
+    },
+    {
+      name: 'SSL certificates.',
+      description: 'Anim aute id magna aliqua ad ad non deserunt sunt.',
+      // icon: LockClosedIcon,
+      img: 'https://res.cloudinary.com/image-gallery-pcl/image/upload/v1714013454/Blawby/dark-project-analytics-screenshot.webp'
+    },
+    {
+      name: 'Database backups.',
+      description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.',
+      // icon: ServerIcon,
+      img: 'https://res.cloudinary.com/image-gallery-pcl/image/upload/v1714012904/Blawby/dark-project-app-screenshot.webp'
+    },
+  ];
+  
+  const activeCardIndex = ref(0);
+  
+  function getIndexClass(index) {
+    // Calculate the position offset based on the active card index
+    const order = (index + features.length - activeCardIndex.value) % features.length;
+    const positions = ['z-30 -top-4', 'z-20 -top-12', 'z-10 -top-20'];
+    // const positions = ['z-30 -top-4 right-24', 'z-20 -top-12 right-16', 'z-10 -top-20 right-10'];
+    return positions[order];
+  }
 </script>
