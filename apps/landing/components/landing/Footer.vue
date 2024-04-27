@@ -64,26 +64,25 @@ import { defineComponent, h } from 'vue'
 
 const navigation = {
   solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
+  { name: 'Features', href: '#Features', current: false },
+  { name: 'Design', href: '#Design', current: false },
+  { name: 'Marketing', href: '#Marketing', current: false },
   ],
   support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
+  { name: 'Pricing', href: '#Pricing', current: false },
+    // { name: 'Documentation', href: '#' },
+    // { name: 'Guides', href: '#' },
+    // { name: 'API Status', href: '#' },
   ],
   company: [
     { name: 'About', href: '#' },
     { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+    // { name: 'Jobs', href: '#' },
+    // { name: 'Press', href: '#' },
+    // { name: 'Partners', href: '#' },
   ],
   legal: [
-    { name: 'Claim', href: '#' },
+    // { name: 'Claim', href: '#' },
     { name: 'Privacy', href: '#' },
     { name: 'Terms', href: '#' },
   ],

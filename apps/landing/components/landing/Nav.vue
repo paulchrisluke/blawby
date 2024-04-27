@@ -95,10 +95,10 @@ const user = {
 }
 const navigation = [
   { name: 'Home', href: '#', current: true },
-  { name: 'Features', href: '#', current: false },
-  { name: 'Design', href: '#', current: false },
-  { name: 'Marketing', href: '#', current: false },
-  { name: 'Pricing', href: '#', current: false },
+  { name: 'Features', href: '#Features', current: false },
+  { name: 'Design', href: '#Design', current: false },
+  { name: 'Marketing', href: '#Marketing', current: false },
+  { name: 'Pricing', href: '#Pricing', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },

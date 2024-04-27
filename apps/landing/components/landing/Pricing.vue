@@ -40,7 +40,7 @@
       name: 'Basic Website',
       id: 'tier-freelancer',
       href: '#',
-      priceMonthly: '$250',
+      priceMonthly: '$500',
       description: 'The essentials to provide your best work for clients.',
       features: ['Scheduling', 'Limited content changes', 'Hosting/Domain 99.9% Uptime', 'Basic analytics', '48-hour support response time'],
       mostPopular: false,
@@ -49,7 +49,7 @@
       name: '+ Marketing',
       id: 'tier-startup',
       href: '#',
-      priceMonthly: '$1200',
+      priceMonthly: '$2200',
       description: 'A plan that scales with your rapidly growing business.',
       features: [
         'Scheduling',
@@ -66,7 +66,7 @@
       name: 'Enterprise',
       id: 'tier-enterprise',
       href: '#',
-      priceMonthly: '$4000',
+      priceMonthly: '$6000',
       description: 'Dedicated support and infrastructure for your company.',
       features: [
         'Round-robin Scheduling',

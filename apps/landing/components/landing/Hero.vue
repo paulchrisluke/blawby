@@ -1,98 +1,280 @@
 <template>
-  <div class="relative isolate overflow-hidden bg-gray-900">
-    <svg class="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
-      <defs>
-        <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-          <path d="M.5 200V.5H200" fill="none" />
-        </pattern>
-      </defs>
-      <svg x="50%" y="-1" class="overflow-visible fill-gray-800/20">
-        <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />
-      </svg>
-      <rect width="100%" height="100%" stroke-width="0" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)" />
-    </svg>
-    <div class="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]" aria-hidden="true">
-      <div class="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20" style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)" />
-    </div>
-    <div class="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-40">
-      <div class="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-        <!-- <img class="h-11" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500" alt="Your Company" /> -->
-        <div class="mt-24 sm:mt-32 lg:mt-16">
-          <a href="#" class="inline-flex space-x-6">
-            <span class="rounded-full bg-indigo-500/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">What's new</span>
-            <span class="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-300">
-              <span>Just shipped v1.0</span>
-              <ChevronRightIcon class="h-5 w-5 text-gray-500" aria-hidden="true" />
-            </span>
-          </a>
+  <div class="bg-white">
+    <div class="mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <!-- Product -->
+      <div class="lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16">
+        <!-- Product image -->
+        <div class="lg:col-span-4 lg:row-end-1">
+          <div class="aspect-h-3 aspect-w-4 overflow-hidden rounded-lg bg-gray-100">
+            <img :src="product.imageSrc" :alt="product.imageAlt" class="object-cover object-center" />
+          </div>
         </div>
-        <h1 class="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">Blawby: The Best Platform for Legal Practices</h1>
-        <p class="mt-6 text-lg leading-8 text-gray-300">Beautifully designed, fully featured, and ready to go lead generation. Scheduling, SEO, Paid Ads, Press Kits, and more!</p>
-        <div class="mt-10 flex items-center gap-x-6">
-          <a href="#" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get started</a>
-          <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-      <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-auto lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-  <div class="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none relative">
-    <div class="w-full lg:w-auto mx-auto lg:mx-0">
-      <!-- Stacked cards -->
-      <div class="relative sm:px-6 lg:px-0">
-        <div
-          v-for="(feature, index) in features"
-          :key="index"
-          :class="getIndexClass(index)"
-          @click="activeCardIndex = index"
-          class="cursor-pointer transition ease-in-out delay-150 hover:-translate-y-6 duration-300 drop-shadow-xl absolute isolate overflow-hidden rounded-lg"
-          style="width: 500px; height: 500px"
-        >
-          <img
-            :src="feature.img"
-            alt="Product screenshot"
-            class="w-full h-full object-cover rounded-lg"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
+        <!-- Product details -->
+        <div class="mx-auto mt-14 max-w-2xl sm:mt-16 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none">
+          <div class="flex flex-col-reverse">
+            <div class="mt-4">
+              <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{{ product.name }}</h1>
+
+              <h2 id="information-heading" class="sr-only">Product information</h2>
+              <p class="mt-2 text-sm text-gray-500">
+                Version {{ product.version.name }} (Updated <time :datetime="product.version.datetime">{{ product.version.date }}</time
+                >)
+              </p>
+            </div>
+
+            <div>
+              <h3 class="sr-only">Reviews</h3>
+              <div class="flex items-center">
+                <StarIcon v-for="rating in [0, 1, 2, 3, 4]" :key="rating" :class="[reviews.average > rating ? 'text-yellow-400' : 'text-gray-300', 'h-5 w-5 flex-shrink-0']" aria-hidden="true" />
+              </div>
+              <p class="sr-only">{{ reviews.average }} out of 5 stars</p>
+            </div>
+          </div>
+
+          <p class="mt-6 text-gray-500">{{ product.description }}</p>
+
+          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
+            <button type="button" onclick="location.href='#Pricing'" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">Starting from {{ product.price }}</button>
+            <button type="button" onclick="window.location.href='https://www.bullcitylegalservices.com'" class="justify-center rounded-md border border-transparent bg-indigo-50 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">Preview</button>
+          </div>
+
+          <div class="mt-10 border-t border-gray-200 pt-10">
+            <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
+            <div class="prose prose-sm mt-4 text-gray-500">
+              <ul role="list">
+                <li v-for="highlight in product.highlights" :key="highlight">{{ highlight }}</li>
+              </ul>
+            </div>
+          </div>
+<!-- 
+          <div class="mt-10 border-t border-gray-200 pt-10">
+            <h3 class="text-sm font-medium text-gray-900">License</h3>
+            <p class="mt-4 text-sm text-gray-500">{{ license.summary }} <a :href="license.href" class="font-medium text-indigo-600 hover:text-indigo-500">Read full license</a></p>
+          </div> -->
+
+          <!-- <div class="mt-10 border-t border-gray-200 pt-10">
+            <h3 class="text-sm font-medium text-gray-900">Share</h3>
+            <ul role="list" class="mt-4 flex items-center space-x-6">
+              <li>
+                <a href="#" class="flex h-6 w-6 items-center justify-center text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">Share on Facebook</span>
+                  <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex h-6 w-6 items-center justify-center text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">Share on Instagram</span>
+                  <svg class="h-6 w-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex h-6 w-6 items-center justify-center text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">Share on X</span>
+                  <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+
+        <div class="mx-auto mt-16 w-full max-w-2xl lg:col-span-4 lg:mt-0 lg:max-w-none">
+          <TabGroup as="div">
+            <div class="border-b border-gray-200">
+              <TabList class="-mb-px flex space-x-8">
+                <Tab as="template" v-slot="{ selected }">
+                  <button :class="[selected ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-gray-700 hover:border-gray-300 hover:text-gray-800', 'whitespace-nowrap border-b-2 py-6 text-sm font-medium']">Customer Reviews</button>
+                </Tab>
+                <Tab as="template" v-slot="{ selected }">
+                  <button :class="[selected ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-gray-700 hover:border-gray-300 hover:text-gray-800', 'whitespace-nowrap border-b-2 py-6 text-sm font-medium']">FAQ</button>
+                </Tab>
+                <!-- <Tab as="template" v-slot="{ selected }">
+                  <button :class="[selected ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-gray-700 hover:border-gray-300 hover:text-gray-800', 'whitespace-nowrap border-b-2 py-6 text-sm font-medium']">License</button>
+                </Tab> -->
+              </TabList>
+            </div>
+            <TabPanels as="template">
+              <TabPanel class="-mb-10">
+                <h3 class="sr-only">Customer Reviews</h3>
+
+                <div v-for="(review, reviewIdx) in reviews.featured" :key="review.id" class="flex space-x-4 text-sm text-gray-500">
+                  <div class="flex-none py-10">
+                    <img :src="review.avatarSrc" alt="" class="h-10 w-10 rounded-full bg-gray-100" />
+                  </div>
+                  <div :class="[reviewIdx === 0 ? '' : 'border-t border-gray-200', 'py-10']">
+                    <h3 class="font-medium text-gray-900">{{ review.author }}</h3>
+                    <p>
+                      <time :datetime="review.datetime">{{ review.date }}</time>
+                    </p>
+
+                    <div class="mt-4 flex items-center">
+                      <StarIcon v-for="rating in [0, 1, 2, 3, 4]" :key="rating" :class="[review.rating > rating ? 'text-yellow-400' : 'text-gray-300', 'h-5 w-5 flex-shrink-0']" aria-hidden="true" />
+                    </div>
+                    <p class="sr-only">{{ review.rating }} out of 5 stars</p>
+
+                    <div class="prose prose-sm mt-4 max-w-none text-gray-500" v-html="review.content" />
+                  </div>
+                </div>
+              </TabPanel>
+
+              <TabPanel class="text-sm text-gray-500">
+                <h3 class="sr-only">Frequently Asked Questions</h3>
+
+                <dl>
+                  <template v-for="faq in faqs" :key="faq.question">
+                    <dt class="mt-10 font-medium text-gray-900">{{ faq.question }}</dt>
+                    <dd class="prose prose-sm mt-2 max-w-none text-gray-500">
+                      <p>{{ faq.answer }}</p>
+                    </dd>
+                  </template>
+                </dl>
+              </TabPanel>
+
+              <TabPanel class="pt-10">
+                <h3 class="sr-only">License</h3>
+
+                <div class="prose prose-sm max-w-none text-gray-500" v-html="license.content" />
+              </TabPanel>
+            </TabPanels>
+          </TabGroup>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ChevronRightIcon } from '@heroicons/vue/20/solid'
-// import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/vue/20/solid';
-  
-  const features = [
+import { StarIcon } from '@heroicons/vue/20/solid'
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
+
+const product = {
+  name: 'Legal Website, Marketing, and Design',
+  version: { name: '1.7', date: 'Apr 27, 2024', datetime: '2024-04-27' },
+  price: '$500/mo',
+  description:
+    'With over 15 years of experience. Paul Chris Luke and his team deliver best in class legal websites which generate qualified leads every day.',
+  highlights: [
+    'Calendly scheduling intigration',
+    'Hubspot list generation',
+    'Best-in-Class SEO markup',
+    'Google & Meta ad support',
+    'Blog & Content production',
+  ],
+  imageSrc: 'https://res.cloudinary.com/image-gallery-pcl/image/upload/v1714012904/Blawby/dark-project-app-screenshot.webp',
+  imageAlt: 'Sample of 30 icons with friendly and fun details in outline, filled, and brand color styles.',
+}
+const reviews = {
+  average: 5,
+  featured: [
     {
-      name: 'Push to deploy.',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      // icon: CloudArrowUpIcon,
-      img: 'https://tailwindui.com/img/component-images/project-app-screenshot.png'
+      id: 1,
+      rating: 5,
+      content: `
+        <p>Chris was extremely helpful and professional. He exceeded my expectations with this project both in terms of quality, as well as timing. He was able to complete the project under-budget and did an incredible job. I would absolutely hire Chris again. My only hesitation in recommending Chris to someone else would be that I don't want him to be too busy to help me out again in the future.</p>
+      `,
+      date: 'July 16, 2021',
+      datetime: '2021-07-16',
+      author: 'Emily Selman',
+      avatarSrc:
+        'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
     },
     {
-      name: 'SSL certificates.',
-      description: 'Anim aute id magna aliqua ad ad non deserunt sunt.',
-      // icon: LockClosedIcon,
-      img: 'https://res.cloudinary.com/image-gallery-pcl/image/upload/v1714013454/Blawby/dark-project-analytics-screenshot.webp'
+      id: 2,
+      rating: 5,
+      content: `
+        <p>I cannot say enough good things about working with Paul. He is a professional that is engaged and willing to help in any way he can. I will be hiring him again in the future and would recommend him to anyone. Thank you again, Paul!</p>
+      `,
+      date: 'July 12, 2021',
+      datetime: '2021-07-12',
+      author: 'Hector Gibbons',
+      avatarSrc:
+        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
     },
     {
-      name: 'Database backups.',
-      description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.',
-      // icon: ServerIcon,
-      img: 'https://res.cloudinary.com/image-gallery-pcl/image/upload/v1714012904/Blawby/dark-project-app-screenshot.webp'
+      id: 2,
+      rating: 5,
+      content: `
+        <p>I cannot say enough good things about working with Paul. He is a professional that is engaged and willing to help in any way he can. I will be hiring him again in the future and would recommend him to anyone. Thank you again, Paul!</p>
+      `,
+      date: 'July 12, 2021',
+      datetime: '2021-07-12',
+      author: 'Hector Gibbons',
+      avatarSrc:
+        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
     },
-  ];
-  
-  const activeCardIndex = ref(0);
-  
-  function getIndexClass(index) {
-    // Calculate the position offset based on the active card index
-    const order = (index + features.length - activeCardIndex.value) % features.length;
-    const positions = ['z-30 -top-4', 'z-20 -top-12', 'z-10 -top-20'];
-    // const positions = ['z-30 -top-4 right-24', 'z-20 -top-12 right-16', 'z-10 -top-20 right-10'];
-    return positions[order];
-  }
+    {
+      id: 2,
+      rating: 5,
+      content: `
+        <p>He's the real deal, exactly as advertised. Increased our conversion rate almost 10x on our landing page, hope to work with him again soon.</p>
+      `,
+      date: 'July 12, 2021',
+      datetime: '2021-07-12',
+      author: 'Hector Gibbons',
+      avatarSrc:
+        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+    },
+    {
+      id: 2,
+      rating: 5,
+      content: `
+        <p>Great experience working with Luke again. He fixed an google ad account that another agency had poorly managed. Luke is very efficient with his time and made sure everything was running smoothly before concluding the contract. 10/10</p>
+      `,
+      date: 'July 12, 2021',
+      datetime: '2021-07-12',
+      author: 'Hector Gibbons',
+      avatarSrc:
+        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
+    },
+    // More reviews...
+  ],
+}
+const faqs = [
+  {
+    question: 'What format are these icons?',
+    answer:
+      'The icons are in SVG (Scalable Vector Graphic) format. They can be imported into your design tool of choice and used directly in code.',
+  },
+  {
+    question: 'Can I use the icons at different sizes?',
+    answer:
+      "Yes. The icons are drawn on a 24 x 24 pixel grid, but the icons can be scaled to different sizes as needed. We don't recommend going smaller than 20 x 20 or larger than 64 x 64 to retain legibility and visual balance.",
+  },
+  // More FAQs...
+]
+const license = {
+  href: '#',
+  summary:
+    'For personal and professional use. You cannot resell or redistribute these icons in their original or modified state.',
+  content: `
+    <h4>Overview</h4>
+    
+    <p>For personal and professional use. You cannot resell or redistribute these icons in their original or modified state.</p>
+    
+    <ul role="list">
+    <li>You\'re allowed to use the icons in unlimited projects.</li>
+    <li>Attribution is not required to use the icons.</li>
+    </ul>
+    
+    <h4>What you can do with it</h4>
+    
+    <ul role="list">
+    <li>Use them freely in your personal and professional work.</li>
+    <li>Make them your own. Change the colors to suit your project or brand.</li>
+    </ul>
+    
+    <h4>What you can\'t do with it</h4>
+    
+    <ul role="list">
+    <li>Don\'t be greedy. Selling or distributing these icons in their original or modified state is prohibited.</li>
+    <li>Don\'t be evil. These icons cannot be used on websites or applications that promote illegal or immoral beliefs or activities.</li>
+    </ul>
+  `,
+}
 </script>
