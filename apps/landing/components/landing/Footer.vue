@@ -64,12 +64,12 @@ import { defineComponent, h } from 'vue'
 
 const navigation = {
   solutions: [
-  { name: 'Features', href: '#Features', current: false },
-  { name: 'Design', href: '#Design', current: false },
-  { name: 'Marketing', href: '#Marketing', current: false },
+  { name: 'Features', href: '/#Features', current: false },
+  { name: 'Design', href: '/#Design', current: false },
+  { name: 'Marketing', href: '/#Marketing', current: false },
   ],
   support: [
-  { name: 'Pricing', href: '#Pricing', current: false },
+  { name: 'Pricing', href: '/#Pricing', current: false },
     // { name: 'Documentation', href: '#' },
     // { name: 'Guides', href: '#' },
     // { name: 'API Status', href: '#' },

@@ -12,18 +12,18 @@
               <XMarkIcon v-else class="block h-6 w-6" aria-hidden="true" />
             </DisclosureButton>
           </div>
-          <div class="flex flex-shrink-0 items-center">
+          <a href="/" class="flex flex-shrink-0 items-center">
             <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
-          </div>
+          </a>
           <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
             <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'rounded-md px-3 py-2 text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
           </div>
         </div>
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <button type="button" class="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-              <PlusIcon class="-ml-0.5 h-5 w-5" aria-hidden="true" />
-              Schedule
+            <button type="button" onclick="window.location.href='/#Pricing'" class="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+              <EnvelopeIcon class="-ml-0.5 h-5 w-5" aria-hidden="true" />
+              Pricing
             </button>
           </div>
           <div class="hidden md:ml-4 md:flex md:flex-shrink-0 md:items-center">
@@ -85,7 +85,7 @@
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-import { PlusIcon } from '@heroicons/vue/20/solid'
+import { EnvelopeIcon } from '@heroicons/vue/20/solid'
 
 const user = {
   name: 'Tom Cook',
@@ -94,11 +94,11 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Features', href: '#Features', current: false },
-  { name: 'Design', href: '#Design', current: false },
-  { name: 'Marketing', href: '#Marketing', current: false },
-  { name: 'Pricing', href: '#Pricing', current: false },
+  { name: 'Home', href: '/', current: true }, 
+  { name: 'Features', href: '/#Features', current: false },
+  { name: 'Design', href: '/#Design', current: false },
+  { name: 'Marketing', href: '/#Marketing', current: false },
+  { name: 'Pricing', href: '/#Pricing', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },

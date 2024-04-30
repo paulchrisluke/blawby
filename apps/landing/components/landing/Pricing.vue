@@ -25,7 +25,7 @@
                 </li>
               </ul>
             </div>
-            <a :href="tier.href" :aria-describedby="tier.id" :class="[tier.mostPopular ? 'bg-indigo-600 text-white shadow-sm hover:bg-indigo-500' : 'text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300', 'mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600']">Schedule</a>
+            <a :href="tier.href" :aria-describedby="tier.id" :class="[tier.mostPopular ? 'bg-indigo-600 text-white shadow-sm hover:bg-indigo-500' : 'text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300', 'mt-8 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600']">Get Started</a>
           </div>
         </div>
       </div>
@@ -39,16 +39,16 @@
     {
       name: 'Basic Website',
       id: 'tier-freelancer',
-      href: '#',
+      href: '/Checkout',
       priceMonthly: '$500',
       description: 'The essentials to provide your best work for clients.',
       features: ['Scheduling', 'Limited content changes', 'Hosting/Domain 99.9% Uptime', 'Basic analytics', '48-hour support response time'],
       mostPopular: false,
     },
     {
-      name: '+ Marketing',
+      name: 'Web & Marketing',
       id: 'tier-startup',
-      href: '#',
+      href: '/Checkout',
       priceMonthly: '$2200',
       description: 'A plan that scales with your rapidly growing business.',
       features: [
@@ -65,7 +65,7 @@
     {
       name: 'Enterprise',
       id: 'tier-enterprise',
-      href: '#',
+      href: '/Checkout',
       priceMonthly: '$6000',
       description: 'Dedicated support and infrastructure for your company.',
       features: [
