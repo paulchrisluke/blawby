@@ -11,7 +11,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Home',
+  title: 'Checkout',
 })
 </script>
 
