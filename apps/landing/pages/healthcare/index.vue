@@ -5,7 +5,7 @@ definePageMeta({
 })
 
 useHead({
-  title: 'Legal Practices',
+  title: 'Healthcare',
 })
 </script>
 

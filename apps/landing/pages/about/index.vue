@@ -1,18 +1,16 @@
 <script setup lang="ts">
 
 definePageMeta({
-  layout: 'landing',
+  layout: 'about',
 })
 
 useHead({
-  title: 'Home',
+  title: 'About',
 })
 </script>
 
 <template>
   <div>
-    <LandingServiceGrid />
-    <LandingProductList />
     <LandingStats />
     <LandingReviews />
     <LandingTeam />

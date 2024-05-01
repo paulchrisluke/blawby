@@ -16,7 +16,7 @@
         <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
           <div class="md:grid md:grid-cols-2 md:gap-8">
             <div>
-              <h3 class="text-sm font-semibold leading-6 text-white">Solutions</h3>
+              <h3 class="text-sm font-semibold leading-6 text-white">Services & Portfolio</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li v-for="item in navigation.solutions" :key="item.name">
                   <a :href="item.href" class="text-sm leading-6 text-gray-300 hover:text-white">{{ item.name }}</a>
@@ -24,7 +24,7 @@
               </ul>
             </div>
             <div class="mt-10 md:mt-0">
-              <h3 class="text-sm font-semibold leading-6 text-white">Support</h3>
+              <h3 class="text-sm font-semibold leading-6 text-white">About & Reviews</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li v-for="item in navigation.support" :key="item.name">
                   <a :href="item.href" class="text-sm leading-6 text-gray-300 hover:text-white">{{ item.name }}</a>
@@ -34,7 +34,7 @@
           </div>
           <div class="md:grid md:grid-cols-2 md:gap-8">
             <div>
-              <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
+              <h3 class="text-sm font-semibold leading-6 text-white">Industries</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li v-for="item in navigation.company" :key="item.name">
                   <a :href="item.href" class="text-sm leading-6 text-gray-300 hover:text-white">{{ item.name }}</a>
@@ -53,7 +53,7 @@
         </div>
       </div>
       <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-        <p class="text-xs leading-5 text-gray-400">&copy; 2024 Blawby, Inc. All rights reserved.</p>
+        <p class="text-xs leading-5 text-gray-400">&copy; 2024 PCL-Labs, LLC. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -64,22 +64,27 @@ import { defineComponent, h } from 'vue'
 
 const navigation = {
   solutions: [
-  { name: 'Features', href: '/#Features', current: false },
-  { name: 'Design', href: '/#Design', current: false },
-  { name: 'Marketing', href: '/#Marketing', current: false },
+  { name: 'Web Development', href: '#', current: false },
+  { name: 'UI/UX Design', href: '#', current: false },
+  { name: 'Brand & Print Design', href: '#', current: false },
+  { name: 'eCommerce CRO', href: '#', current: false },
+  { name: 'Paid Advertising', href: '#', current: false },
+  { name: 'Organic Marketing', href: '#', current: false },
   ],
   support: [
-  { name: 'Pricing', href: '/#Pricing', current: false },
+  { name: 'About', href: '#', current: false },
+  { name: 'Reviews', href: '#', current: false },
+  { name: 'UpWork', href: '#', current: false },
     // { name: 'Documentation', href: '#' },
     // { name: 'Guides', href: '#' },
     // { name: 'API Status', href: '#' },
   ],
   company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    // { name: 'Jobs', href: '#' },
-    // { name: 'Press', href: '#' },
-    // { name: 'Partners', href: '#' },
+    { name: 'Legal Practices', href: '#' },
+    { name: 'Healthcare', href: '#' },
+    { name: 'Shopify', href: '#' },
+    { name: 'Logistics', href: '#' },
+    { name: 'Crypto', href: '#' },
   ],
   legal: [
     // { name: 'Claim', href: '#' },
