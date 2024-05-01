@@ -99,6 +99,7 @@ const navigation = [
   { name: 'Design', href: '/#Design', current: false },
   { name: 'Marketing', href: '/#Marketing', current: false },
   { name: 'Pricing', href: '/#Pricing', current: false },
+  { name: 'Legal Practices', href: '/legal-practices', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
