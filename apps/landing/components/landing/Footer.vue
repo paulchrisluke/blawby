@@ -64,48 +64,57 @@ import { defineComponent, h } from 'vue'
 
 const navigation = {
   solutions: [
-  { name: 'Web Development', href: '#', current: false },
-  { name: 'UI/UX Design', href: '#', current: false },
-  { name: 'Brand & Print Design', href: '#', current: false },
-  { name: 'eCommerce CRO', href: '#', current: false },
-  { name: 'Paid Advertising', href: '#', current: false },
-  { name: 'Organic Marketing', href: '#', current: false },
+  { name: 'Web Development', href: '/Portfolio', current: false },
+  { name: 'UI/UX Design', href: '/Portfolio', current: false },
+  { name: 'Brand & Print Design', href: '/Portfolio', current: false },
+  { name: 'eCommerce CRO', href: '/Portfolio', current: false },
+  { name: 'Paid Advertising', href: '/Portfolio', current: false },
+  { name: 'Organic Marketing', href: '/Portfolio', current: false },
   ],
   support: [
-  { name: 'About', href: '#', current: false },
-  { name: 'Reviews', href: '#', current: false },
-  { name: 'UpWork', href: '#', current: false },
+  { name: 'About', href: '/About', current: false },
+  { name: 'Reviews', href: '/About', current: false },
+  { name: 'UpWork', href: 'https://www.upwork.com/fl/~01e187ee4b1c5ab0a1', current: false },
     // { name: 'Documentation', href: '#' },
     // { name: 'Guides', href: '#' },
     // { name: 'API Status', href: '#' },
   ],
   company: [
-    { name: 'Legal Practices', href: '#' },
-    { name: 'Healthcare', href: '#' },
-    { name: 'Shopify', href: '#' },
-    { name: 'Logistics', href: '#' },
-    { name: 'Crypto', href: '#' },
+    { name: 'Legal Practices', href: '/legal-practices' },
+    { name: 'Healthcare', href: '/healthcare' },
+    { name: 'Shopify', href: '/shopify' },
+    { name: 'Logistics', href: '/logistics' },
+    { name: 'Crypto', href: '/crypto' },
   ],
   legal: [
     // { name: 'Claim', href: '#' },
     { name: 'Privacy', href: '#' },
     { name: 'Terms', href: '#' },
   ],
-  // social: [
-  //   {
-  //     name: 'Facebook',
-  //     href: '#',
-  //     icon: defineComponent({
-  //       render: () =>
-  //         h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
-  //           h('path', {
-  //             'fill-rule': 'evenodd',
-  //             d: 'M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z',
-  //             'clip-rule': 'evenodd',
-  //           }),
-  //         ]),
-  //     }),
-  //   },
+  social: [
+  {
+  name: 'Upwork',
+  href: '#',
+  icon: defineComponent({
+    render: () =>
+      h('svg', { fill: 'currentColor', viewBox: '0 0 397.2 226.9' }, [
+        h('g', [
+          h('g', [
+            h('path', {
+              class: 'st0',
+              d: 'M282.1,0c-46.8,0-73,30.5-80.5,61.9c-8.5-16-14.8-37.4-19.7-57.3h-64.7v80.5c0,29.2-13.3,50.8-39.3,50.8S37,114.3,37,85.1l0.3-80.5H0v80.5c0,23.5,7.6,44.8,21.5,60C35.8,160.8,55.3,169,77.9,169c45,0,76.4-34.5,76.4-83.9V31c4.7,17.8,15.9,52,37.3,82l-20,113.9h37.9l13.2-80.7c4.3,3.6,8.9,6.8,13.8,9.7c12.7,8,27.2,12.5,42.2,13c0,0,2.3,0.1,3.5,0.1c46.4,0,83.3-35.9,83.3-84.4S328.5,0,282.1,0 M282.1,135.8c-28.7,0-47.7-22.2-53-30.8c6.8-54.4,26.7-71.6,53-71.6c26,0,46.2,20.8,46.2,51.2C328.3,115,308.1,135.8,282.1,135.8'
+            })
+          ])
+        ]),
+        h('g', [
+          h('path', {
+            class: 'st0',
+            d: 'M366.5,4.3v3.2h4.5v11.3h3.5V7.5h4.5V4.3H366.5z M392.3,4.3l-3.2,9.9H389l-3.1-9.9H381v14.5h3.3V8.4h0.1 l3.1,10.4h3l3.2-10.4h0.1v10.4h3.4V4.3H392.3z'
+          })
+        ])
+      ])
+  })
+},
   //   {
   //     name: 'Instagram',
   //     href: '#',
@@ -132,20 +141,20 @@ const navigation = {
   //         ]),
   //     }),
   //   },
-  //   {
-  //     name: 'GitHub',
-  //     href: '#',
-  //     icon: defineComponent({
-  //       render: () =>
-  //         h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
-  //           h('path', {
-  //             'fill-rule': 'evenodd',
-  //             d: 'M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z',
-  //             'clip-rule': 'evenodd',
-  //           }),
-  //         ]),
-  //     }),
-  //   },
+    {
+      name: 'GitHub',
+      href: 'https://github.com/pcl-labs',
+      icon: defineComponent({
+        render: () =>
+          h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
+            h('path', {
+              'fill-rule': 'evenodd',
+              d: 'M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z',
+              'clip-rule': 'evenodd',
+            }),
+          ]),
+      }),
+    },
   //   {
   //     name: 'YouTube',
   //     href: '#',
@@ -160,6 +169,6 @@ const navigation = {
   //         ]),
   //     }),
   //   },
-  // ],
+  ],
 }
 </script>
