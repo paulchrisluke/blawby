@@ -5,8 +5,8 @@
         <div class="px-6 pb-24 pt-16 sm:pb-32 sm:pt-20 lg:col-start-2 lg:px-8 lg:pt-32">
           <div class="mx-auto max-w-2xl lg:mr-0 lg:max-w-lg">
             <h2 class="text-base font-semibold leading-8 text-indigo-600">Our track record</h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Trusted by thousands of creators&nbsp;worldwide</p>
-            <p class="mt-6 text-lg leading-8 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Top rated plus on Upwork, trusted worldwide</p>
+            <p class="mt-6 text-lg leading-8 text-gray-600">Rated in the top 1% of all agencies on Upwork, we get results. Focused on CRO, PCL-Labs creates performant, converting websites and marketing materials.</p>
             <dl class="mt-16 grid max-w-xl grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 xl:mt-16">
               <div v-for="stat in stats" :key="stat.id" class="flex flex-col gap-y-3 border-l border-gray-900/10 pl-6">
                 <dt class="text-sm leading-6 text-gray-600">{{ stat.name }}</dt>
@@ -21,9 +21,9 @@
   
   <script setup>
   const stats = [
-    { id: 1, name: 'Creators on the platform', value: '8,000+' },
-    { id: 2, name: 'Flat platform fee', value: '3%' },
+    { id: 1, name: 'Page load time', value: '<1 Second' },
+    { id: 2, name: 'Increased conversions', value: '600%' },
     { id: 3, name: 'Uptime guarantee', value: '99.9%' },
-    { id: 4, name: 'Paid out to creators', value: '$70M' },
+    { id: 4, name: 'Revenue generated', value: '$70M' },
   ]
   </script>

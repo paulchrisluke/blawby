@@ -11,14 +11,14 @@
             <h3 class="mt-6 text-base font-semibold leading-7 tracking-tight text-white">{{ person.name }}</h3>
             <p class="text-sm leading-6 text-gray-400">{{ person.role }}</p>
             <ul role="list" class="mt-6 flex justify-center gap-x-6">
-              <li>
+              <!-- <li>
                 <a :href="person.xUrl" class="text-gray-400 hover:text-gray-300">
                   <span class="sr-only">X</span>
                   <svg class="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
                   </svg>
                 </a>
-              </li>
+              </li> -->
               <li>
                 <a :href="person.linkedinUrl" class="text-gray-400 hover:text-gray-300">
                   <span class="sr-only">LinkedIn</span>
@@ -37,10 +37,50 @@
   <script setup>
   const people = [
     {
-      name: 'Leonard Krasner',
-      role: 'Senior Designer',
+      name: 'Paul "Chris" Luke',
+      role: 'CEO/Ads',
       imageUrl:
         'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      xUrl: '#',
+      linkedinUrl: '#',
+    },
+    {
+      name: 'Joe Elia',
+      role: 'CTO',
+      imageUrl:
+        'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      xUrl: '#',
+      linkedinUrl: '#',
+    },
+    {
+      name: 'Koko',
+      role: 'Lead Designer',
+      imageUrl:
+        'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      xUrl: '#',
+      linkedinUrl: '#',
+    },
+    {
+      name: 'PizzaWizard',
+      role: 'Lead Developer',
+      imageUrl:
+        'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      xUrl: '#',
+      linkedinUrl: '#',
+    },
+    {
+      name: 'Jeremie Venditti',
+      role: 'Digital Marketer',
+      imageUrl:
+        'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      xUrl: '#',
+      linkedinUrl: '#',
+    },
+    {
+      name: 'Brittni S.',
+      role: 'Content Writer',
+      imageUrl:
+        'https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/a49c96bf673300e9bda26ef0f1fda6f3-1641494670270/e9697fff-b8eb-4312-93ca-e375fdfe7e2b.jpg',
       xUrl: '#',
       linkedinUrl: '#',
     },

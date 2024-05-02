@@ -2,11 +2,13 @@
     <div class="relative isolate overflow-hidden bg-gray-900">
       <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Boost your productivity.<br />Start using our app today.</h2>
-          <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">Incididunt sint fugiat pariatur cupidatat consectetur sit cillum anim id veniam aliqua proident excepteur commodo do ea.</p>
+          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Boost your conversions.<br />Request a quote today.</h2>
+          <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">You were probably sent here via a referral from one of our clients. Request a quote to see how we can increase your converisons across the board.</p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get started</a>
-            <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a>
+            <button type="button" onclick="window.location.href='/Contact'" class="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+              <EnvelopeIcon class="-ml-0.5 h-5 w-5" aria-hidden="true" />
+              Contact Us
+            </button>            <!-- <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a> -->
           </div>
         </div>
       </div>
@@ -21,4 +23,9 @@
       </svg>
     </div>
   </template>
+
+<script setup>
+import { EnvelopeIcon } from '@heroicons/vue/20/solid'
+
+</script>
   
