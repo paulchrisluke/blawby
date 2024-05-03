@@ -1,17 +1,3 @@
-<!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
 <template>
   <div class="relative bg-white">
     <div class="lg:absolute lg:inset-0 lg:left-1/2">
@@ -66,7 +52,7 @@
                   <textarea id="message" name="message" rows="4" aria-describedby="message-description" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                 </div>
               </div>
-              <fieldset class="sm:col-span-2">
+              <!-- <fieldset class="sm:col-span-2">
                 <legend class="block text-sm font-semibold leading-6 text-gray-900">Expected budget</legend>
                 <div class="mt-4 space-y-4 text-sm leading-6 text-gray-600">
                   <div class="flex gap-x-2.5">
@@ -86,7 +72,20 @@
                     <label for="budget-over-100k">$100K+</label>
                   </div>
                 </div>
-              </fieldset>
+              </fieldset> -->
+              <SwitchGroup as="div" class="flex gap-x-4 sm:col-span-2">
+          <div class="flex h-6 items-center">
+            <Switch v-model="agreed" :class="[agreed ? 'bg-indigo-600' : 'bg-gray-200', 'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600']">
+              <span class="sr-only">Agree to policies</span>
+              <span aria-hidden="true" :class="[agreed ? 'translate-x-3.5' : 'translate-x-0', 'h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out']" />
+            </Switch>
+          </div>
+          <SwitchLabel class="text-sm leading-6 text-gray-600">
+            By selecting this, you agree to our
+            {{ ' ' }}
+            <a href="#" class="font-semibold text-indigo-600">privacy&nbsp;policy</a>.
+          </SwitchLabel>
+        </SwitchGroup>
             </div>
             <div class="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
               <button type="submit" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Send message</button>
@@ -97,3 +96,11 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+import { ChevronDownIcon } from '@heroicons/vue/20/solid'
+import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
+
+const agreed = ref(false)
+</script>
